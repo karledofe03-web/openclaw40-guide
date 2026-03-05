@@ -1,0 +1,223 @@
+---
+const title = "openclaw40+使用指南";
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #ffffff;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 16px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 140px 20px 80px;
+            background: linear-gradient(180deg, #fff 0%, #f5f5f7 100%);
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        
+        .gradient {
+            background: linear-gradient(135deg, #0071e3 0%, #42a5f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 21px;
+            color: #86868b;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #0071e3;
+            color: white;
+            text-decoration: none;
+            border-radius: 24px;
+            font-weight: 500;
+            margin: 8px;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #0077ed;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,113,227,0.25);
+        }
+        
+        .btn-secondary {
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+        
+        .btn-secondary:hover {
+            background: #e8e8ed;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+            border: 1px solid #d2d2d7;
+        }
+        
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .card p {
+            color: #86868b;
+        }
+        
+        .nav {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .nav h2 {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        
+        .nav-card {
+            display: block;
+            padding: 24px;
+            background: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #d2d2d7;
+            transition: all 0.3s;
+        }
+        
+        .nav-card:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+        
+        .nav-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .nav-card p {
+            font-size: 14px;
+            color: #86868b;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #86868b;
+            border-top: 1px solid #d2d2d7;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>openclaw40+使用指南</h1>
+    </header>
+    
+    <section class="hero">
+        <h1>从零开始，轻松掌握<br><span class="gradient">OpenClaw AI 助理</span></h1>
+        <p class="tagline">开源免费 · 专为中文用户打造 · 40+ 实用教程</p>
+        <a href="#start" class="btn">开始阅读</a>
+        <a href="https://github.com/openclaw/openclaw" class="btn btn-secondary">查看 GitHub</a>
+    </section>
+    
+    <section class="features">
+        <div class="card">
+            <h3>🤖 私有化部署</h3>
+            <p>数据完全存储在你自己的服务器上，隐私安全无忧</p>
+        </div>
+        <div class="card">
+            <h3>💬 多平台接入</h3>
+            <p>支持 Telegram、Discord、飞书、钉钉等平台</p>
+        </div>
+        <div class="card">
+            <h3>🧩 丰富技能生态</h3>
+            <p>5000+ 社区技能，一键安装即用</p>
+        </div>
+    </section>
+    
+    <section class="nav" id="start">
+        <h2>快速导航</h2>
+        <div class="nav-grid">
+            <a href="/install" class="nav-card">
+                <h3>📦 安装篇</h3>
+                <p>环境准备、快速安装、配置指南</p>
+            </a>
+            <a href="/usage" class="nav-card">
+                <h3>💡 使用篇</h3>
+                <p>基础操作、技能安装、通道配置</p>
+            </a>
+            <a href="/faq" class="nav-card">
+                <h3>❓ FAQ</h3>
+                <p>常见问题、错误排查</p>
+            </a>
+            <a href="/resources" class="nav-card">
+                <h3>📚 资源推荐</h3>
+                <p>精选技能、视频教程</p>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Made with ❤️ by openclaw40+ 社区</p>
+    </footer>
+</body>
+</html>
